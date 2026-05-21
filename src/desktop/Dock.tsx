@@ -1,4 +1,4 @@
-import { Folder, FileText, Calculator as CalcIcon, Compass, Info, TerminalSquare, Trash2 } from "lucide-react";
+import { Folder, FileText, Calculator as CalcIcon, Compass, Info, TerminalSquare, Trash2, Radio } from "lucide-react";
 import { useDesktop, type AppId } from "./store";
 
 const ITEMS: { id: AppId; label: string; Icon: typeof Folder; color: string }[] = [
@@ -7,6 +7,7 @@ const ITEMS: { id: AppId; label: string; Icon: typeof Folder; color: string }[] 
   { id: "textedit", label: "TextEdit", Icon: FileText, color: "from-zinc-200 to-zinc-400" },
   { id: "calculator", label: "Calculator", Icon: CalcIcon, color: "from-zinc-700 to-zinc-900" },
   { id: "terminal", label: "Terminal", Icon: TerminalSquare, color: "from-neutral-800 to-black" },
+  { id: "connection", label: "Connection", Icon: Radio, color: "from-emerald-400 to-teal-600" },
   { id: "about", label: "About", Icon: Info, color: "from-slate-300 to-slate-500" },
 ];
 
