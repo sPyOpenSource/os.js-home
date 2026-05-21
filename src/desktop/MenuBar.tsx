@@ -6,15 +6,16 @@ export function MenuBar() {
   const { focusedId, windows, open } = useDesktop();
   const focused = windows.find((w) => w.id === focusedId);
   const activeTitle = focused ? APP_TITLES[focused.appId].title : "Finder";
-  const [now, setNow] = useState(new Date());
+  const [now, setNow] = useState<Date | null>(null);
 
   useEffect(() => {
+    setNow(new Date());
     const t = setInterval(() => setNow(new Date()), 1000 * 30);
     return () => clearInterval(t);
   }, []);
 
-  const time = now.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
-  const date = now.toLocaleDateString([], { weekday: "short", month: "short", day: "numeric" });
+  const time = now ? now.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }) : "";
+  const date = now ? now.toLocaleDateString([], { weekday: "short", month: "short", day: "numeric" }) : "";
 
   return (
     <div

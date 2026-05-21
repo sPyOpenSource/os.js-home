@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, useCallback, type ReactNode } from "react";
 
-export type AppId = "finder" | "textedit" | "calculator" | "browser" | "about" | "terminal";
+export type AppId = "finder" | "textedit" | "calculator" | "browser" | "about" | "terminal" | "connection";
 
 export interface WindowState {
   id: string;
@@ -36,6 +36,7 @@ const APP_META: Record<AppId, { title: string; w: number; h: number }> = {
   browser: { title: "Safari", w: 820, h: 540 },
   about: { title: "About This Mac", w: 460, h: 360 },
   terminal: { title: "Terminal", w: 600, h: 380 },
+  connection: { title: "Connection", w: 620, h: 460 },
 };
 
 let zCounter = 10;

@@ -8,6 +8,7 @@ import { Calculator } from "./apps/Calculator";
 import { Browser } from "./apps/Browser";
 import { About } from "./apps/About";
 import { Terminal } from "./apps/Terminal";
+import { Connection } from "./apps/Connection";
 
 function WindowLayer() {
   const { windows } = useDesktop();
@@ -21,6 +22,7 @@ function WindowLayer() {
           {w.appId === "browser" && <Browser />}
           {w.appId === "about" && <About />}
           {w.appId === "terminal" && <Terminal />}
+          {w.appId === "connection" && <Connection />}
         </Window>
       ))}
     </>
