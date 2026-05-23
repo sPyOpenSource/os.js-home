@@ -19,7 +19,7 @@ export function Browser() {
         <button className="p-1 rounded hover:bg-black/5"><Share className="w-4 h-4" /></button>
         <button className="p-1 rounded hover:bg-black/5"><Plus className="w-4 h-4" /></button>
       </div>
-      <iframe src="https://lovable.dev" className="flex-1 flex flex-col items-center justify-center text-center gap-3 bg-gradient-to-b from-sky-50 to-white">
+      <iframe src={url} className="flex-1 flex flex-col items-center justify-center text-center gap-3 bg-gradient-to-b from-sky-50 to-white">
       </iframe>
     </div>
   );
